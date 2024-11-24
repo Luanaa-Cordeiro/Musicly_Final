@@ -44,8 +44,18 @@ class PopularController extends Controller
             ];
         });*/
 
+        $artistas = Artista::all();
+        $albuns = Album::all();
+        $generos = Genero::all();
+        $musicas = Musica::all();
         $popular = $this->popular->all();
-        return view('popular', ['populars' => $popular]);
+        return view('popular', [
+            'populars' => $popular,
+            'artistas' => $artistas,
+            'albuns' => $albuns,
+            'generos' => $generos,
+            'musicas' => $musicas
+        ]);
     }
 
     /**

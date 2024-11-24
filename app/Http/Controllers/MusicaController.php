@@ -33,8 +33,16 @@ class MusicaController extends Controller
             ];
         });
 
+        $artistas = Artista::all();
+        $albuns = Album::all();
+        $generos = Genero::all();
         $musica = $this->musica->all();
-        return view('musicas', ['musicas' => $musica]);
+        return view('musicas', [
+        'musicas' => $musica,
+        'artistas' => $artistas,
+        'albuns' => $albuns,
+        'generos' => $generos
+    ]);
     }
 
     /**
