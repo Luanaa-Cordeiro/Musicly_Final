@@ -1,0 +1,265 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+
+.cartoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.cartoes button{
+    background-color: #6d7fcc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 8px 16px;
+    margin: 0px 2px;
+}
+
+.cartoes button:hover{
+    background-color: #20368d;
+    
+}
+
+.cartoes_titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.cartoes_titulo img{
+    width: 20px;
+height: 20px;
+margin-left: 10px;
+    
+}
+
+select{
+    border: solid #6d7fcc 1px;
+    border-radius: 10px;
+    padding: 6px 20px;
+    margin-top: 10px;
+}
+
+.dropdown-toggle{
+margin-right: 25px;
+}
+
+.btn.dropdown-toggle {
+    color: black; 
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+
+
+.adicionar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+
+.adicionar button{
+    background-color: #6d7fcc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 8px 16px;
+    margin: 0px 2px;
+}
+
+.adicionar button:hover{
+    background-color: #20368d
+}
+
+#deletar{
+    background-color: #20368d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0px 2px;
+}
+
+
+#deletar:hover{
+    background-color: rgb(117, 110, 3);
+}
+
+#editar{
+    background-color: #90a0e9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0px 5px;
+}
+
+#editar:hover{
+    background-color: rgb(1, 31, 0);
+}
+
+#ação{
+    text-align: center;
+}
+
+#botões{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*Criar*/
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+
+.formulario{
+    background-color: #90a0e9;
+    padding: 50px 50px 30px 50px;
+    border-radius: 10px;
+}
+
+.asterisco{
+    color: red;
+    margin-left: 5px;
+}
+#criar{
+    background-color: #6d7fcc;
+}
+
+#criar:hover{
+    background-color: #20368d;
+}
+
+
+#botao_criar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#botao_criar button{
+    background-color: #20368d;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+#botao_criar a{
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+/*Criar*/
+
+
+/*Editar*/
+.main_editar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; 
+    flex-direction: column;
+}
+
+
+.formulario_editar{
+    background-color: #90a0e9;
+    padding: 50px 50px 30px 50px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#botao_editar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#botao_editar button{
+    background-color: #20368d;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+#botao_editar a{
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+/*Editar*/
+
+
+/*Deletar*/
+.deletar_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.botoes_deletar button{
+    margin-top: 20px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(114, 5, 5);
+    margin-bottom: 15px;
+}
+
+.botoes_deletar button:hover{
+    background-color: rgb(54, 2, 2);
+}
+
+.botoes_deletar a{
+    margin-left: 50px;
+}
+/*Deletar*/
+
+
+.modal_main{
+    padding: 0 30px 30px 30px;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

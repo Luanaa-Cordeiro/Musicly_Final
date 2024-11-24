@@ -1,0 +1,106 @@
+.carousel .carousel-indicators button{
+    background-color: #20368d;
+}
+
+.botao_entrar{
+    background-color:  #20368d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 6px 50px;
+    margin: 10px 2px;
+}
+
+.botao_entrar:hover{
+    background-color: #20368d
+}
+
+/*.carousel img{
+    height: 350px;
+}*/
+
+.carousel-inner{
+    height: 20em;
+}
+
+.navbar{
+    background-color: #6d7fcc;
+    color: aliceblue;
+}
+
+.navbar a{
+    color: aliceblue;
+}
+
+
+.cartoes{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.biografia{
+    background: linear-gradient(to right, #6d7ecc, #4c5fb4, #20368d);
+    height: 450px;
+}
+
+.biografia h1{
+    margin-left: 60px;
+    color: aliceblue;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.cartoes_bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+}
+
+.card{
+    margin: 0 40px 40px 40px;
+}
+
+.main_card{
+    margin-top: 30px;
+}
+
+.main_card h1{
+    margin-left: 60px;
+}
+
+.btn{
+    background-color: #6d7fcc;
+    color: aliceblue;
+}
+
+.about{
+    background: linear-gradient(to right, #6d7ecc, #4c5fb4, #20368d);
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+.itens_about{
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 600px;
+}
+
+.about img{
+    height: 300px;
+    width: 550px;
+    align-items: end;
+}
+
+.populares{
+    margin: 40px 60px 60px 60px;
+}
+
+.populares h1{
+    margin-bottom: 25px;
+}
