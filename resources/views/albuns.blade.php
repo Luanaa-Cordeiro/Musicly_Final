@@ -184,6 +184,7 @@
             <tr>
                 <th scope="col" class="px-6 py-3"style="background-color:#6d7fcc; color:white;">Id</th>
                 <th scope="col" class="px-6 py-3"style="background-color:#6d7fcc; color:white;">Nome</th>
+                <th scope="col" class="px-6 py-3" style="background-color:#6d7fcc; color:white;">Artista</th>
                 <th scope="col" class="px-6 py-3" style="background-color:#6d7fcc; color:white;" id='ação'>Ações</th>
 
                 
@@ -197,6 +198,9 @@
                 </td>
                 <td class="px-6 py-4">
                 {{$album->nome}}
+                </td>
+                <td class="px-6 py-4">
+                    {{$album->artista->nome}}
                 </td>
                 <td id='botões' class="px-6 py-4">
                 <a href="{{ route('albuns.edit', ['album' => $album->id]) }}"><button id="editar">Editar</button></a>
