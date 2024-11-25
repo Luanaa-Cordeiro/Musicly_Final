@@ -24,6 +24,41 @@
             </li>
         </ul>
 
+<!-- Modal Sair -->
+<div id="sair-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Botão de fechar -->
+            <button id="closeModalBtn" type="button" class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            
+            <!-- Corpo do Modal -->
+            <div class="p-4 md:p-5 text-center">
+                <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Tem certeza que deseja sair?</h3>
+                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                @csrf
+                <button type="submit" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                    Sair
+                </button>
+                
+        
+                            
+                <button id="closeModalBtn2" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    Cancelar
+                </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
         <div class="nav_button">
             <div class="user">
         <img src="{{ asset('assets/imagens/usuario-de-perfil.png')}}" alt="">
@@ -97,11 +132,7 @@
                  <img src="{{ asset('assets/imagens/sair.png')}}" alt="">
                     <ul class=" text-sm font-medium">
                  <li>
-                
-                 <form action="{{ route('logout') }}" method="POST" id="logout-form">
-                 @csrf
-                            <button class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50" type="submit" class="btn">Sair</button>
-                            </form>
+                            <button id="openModalBtn" class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50" type="button"> Sair</button>
                         </li>
                         </ul>
                  </div>
@@ -227,6 +258,24 @@
             // Ajuste da posição da sidebar
             sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
         });
+
+         // Obtendo os elementos do botão e do modal
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtns = document.querySelectorAll('#closeModalBtn, #closeModalBtn2');
+    const modal = document.getElementById('sair-modal');
+
+    // Modal Sair
+    openModalBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    // Função para fechar o modal
+    closeModalBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    });
+
     </script>
 </body>
 

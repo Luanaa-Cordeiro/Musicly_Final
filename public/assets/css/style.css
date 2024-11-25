@@ -59,7 +59,24 @@ margin-right: 25px;
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
+.formulario_edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+}
 
+.formulario_edit_musica{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.botao_voltar_editar a{
+    margin-left: 156px;
+    font-size: 14px;
+}
 
 
 .adicionar{

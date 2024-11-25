@@ -148,58 +148,40 @@
     @endforeach
 @endif
 
-<!-- Modal -->
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+
+
+
+
+
+      <div class="formulario_edit">         
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Criar Artista
+                    Editar Artista
                 </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
             </div>
             <!-- Modal body -->
             <div class="modal_main">
-                <form class="space-y-4" action="{{ route('artistas.store')}}" method="post">
+            <form class="space-y-4" action="{{ route('artistas.update', ['artista' => $artistas->id])}}" method='post'>
                 @csrf
                     <div>
                         <label for="nome_artista" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do Artista<span class="asterisco">*</span></label>
-                        <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" 
-                        required  value='{{old("nome")}}' type="text" id="form1Example2" name="nome" placeholder="Nome"/>
+                        <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="{{$artistas->nome}}" name="nome"/>
+                        <input type="hidden" name="_method" value="PUT">
                     </div>
-                    <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="criar">Criar
+                    <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="criar">Editar
                     </button>
+                    <div class="botao_voltar_editar">
+                    <a href="{{ route('artistas.index')}}">Voltar</a>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
-<!-- Modal ends -->
-
-<div class="main_editar">
-<div class="formulario_editar">
-<form action="{{ route('artistas.update', ['artista' => $artistas->id])}}" method='post'>
-@csrf
-  <div data-mdb-input-init class="form-outline mb-4">
-    <label class="form-label" for="nome_artista" style="color:white;">Nome do Artista<span class="asterisco">*</span></label><br>
-    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required value="{{$artistas->nome}}" name="nome"/>
-    <input type="hidden" name="_method" value="PUT">
-  </div>
-
-  <div id="botao_editar">
-  <button data-mdb-ripple-init type="submit" id="editar" class="btn btn-block">Editar</button>
-  <a href="{{ route('artistas.index')}}">Voltar</a>
-</div>
-</form>
-</div>
-</div>
+    </div>
 
    
 

@@ -231,10 +231,10 @@
                 {{$popular->musica->nome}}
                 </td>
                 <td class="px-6 py-4">
-                {{$popular->album->nome}}
+                {{$popular->artista->nome}}
                 </td>
                 <td class="px-6 py-4">
-                {{$popular->artista->nome}}
+                {{$popular->album->nome}}
                 </td>
                 <td class="px-2 py-4">
                 {{$popular->genero->nome}}
