@@ -4,230 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{asset('assets/css/inicio.css')}}">
-    <title>Document</title>
+    <title>MusicLy</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg ">
-  <div class="container">
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
-      <img
-        src="{{asset('assets/imagens/MusicLy.png')}}"
-        height="35"
-        alt="MDB Logo"
-        loading="lazy"
-        style="margin-top: -1px;"
-      />
+
+
+<nav class=" navbar border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="{{asset('assets/imagens/MusicLy.png')}}" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MusicLy</span>
     </a>
-
-    <button
-      data-mdb-collapse-init
-      class="navbar-toggler"
-      type="button"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
     </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+    <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-transparent md:dark:bg-transparent dark:border-gray-700">
 
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link"href="#">MusicLy</a>
+
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a>
         </li>
-      </ul>
+        <li>
+        <div class="relative">
+  <!-- Dropdown Button -->
+  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+    Tabelas
+    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+  </button>
 
-      <div class="d-flex align-items-center">
-        <button data-mdb-ripple-init type="button" class="btn btn-link px-3 me-2">
+  <!-- Dropdown Menu -->
+  <div id="dropdownNavbar" class=" drop hidden bg-white rounded-lg shadow-md absolute mt-2 w-48 dark:bg-gray-800 dark:border-gray-700 z-10">
+    <ul class="text-sm text-gray-700 dark:text-gray-200">
+      <li><a href="#" class="block px-4 py-2">Option 1</a></li>
+      <li><a href="#" class="block px-4 py-2">Option 2</a></li>
+      <li><a href="#" class="block px-4 py-2">Option 3</a></li>
+    </ul>
+  </div>
+</div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+        
           @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
+    
                                 @auth
+                                <li>
                                     <a
                                         href="{{ url('/home') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                       class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                     >
-                                        Dashboard
+                                        Entrar
                                     </a>
                                 @else
                                     <a
                                         href="{{ route('login') }}"
-                                         class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-white/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                     >
-                                        Log in
+                                        Login
                                     </a>
+                                    </li>
 
-
+                                    <li>
                                     @if (Route::has('register'))
                                         <a
                                             href="{{ route('register') }}"
-                                             class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-white/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                         >
                                             Cadastrar-se
                                         </a>
+                                        </li>
                                     @endif
                                 @endauth
-                            </nav>
+                          
                         @endif
-                    </header>
-        <!--<a
-          data-mdb-ripple-init
-          class="btn btn-dark px-3"
-          href="https://github.com/mdbootstrap/mdb-ui-kit"
-          role="button"
-          ><i class="fab fa-github"></i
-        ></a>-->
-      </div>
+      </ul>
     </div>
   </div>
 </nav>
 
+<div class="imagem_inicio">
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active " aria-current="true" aria-label="Slide 1"></button>
-    <button style=""type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"aria-current="true" aria-label="Slide 4"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item h-100 active" style="background-image: url('{{ asset('assets/imagens/artistas1.avif') }}'); background-size:contain; background-repeat: no-repeat; background-position: center;">
-  
-      <div class="carousel-caption d-none d-md-block">
-        <button class="botao_entrar">Artistas</button>
-      </div>
-    </div>
-    <div class="carousel-item h-100" style="background-image: url('{{ asset('assets/imagens/generos_musicais.jpg') }}'); background-size:contain; background-repeat: no-repeat; background-position: center; ">
-      
-      <div class="carousel-caption d-none d-md-block">
-   
-        <button class="botao_entrar">Gêneros</button>
-      </div>
-    </div>
-    <div class="carousel-item h-100" style="background-image: url('{{ asset('assets/imagens/albuns.png') }}'); background-size:contain; background-repeat: no-repeat; background-position: center;">
-     
-      <div class="carousel-caption d-none d-md-block">
-        <button class="botao_entrar">Albuns</button>
-      </div>
-    </div>
-    <div class="carousel-item h-100" style="background-image: url('{{ asset('assets/imagens/musicas.jpg') }}'); background-size:contain; background-repeat: no-repeat; background-position: center;">
-    
-      <div class="carousel-caption d-none d-md-block">
-        <button class="botao_entrar">Musicas</button>
-      </div>
-    </div>
-  </div>
-  <button  style="background-color: #6d7fcc; color: white;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="background-color: #6d7fcc; color: white;">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 
-<div class=" main_card">
-<h1>Serviços</h1>
 
-<div class="cartoes">
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/artistas1.jpg') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Artistas</h5>
-    <p class="card-text">Os melhores cantores da indústria musical!</p>
 
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/albuns2.jpg') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Gêneros</h5>
-    <p class="card-text">Os melhores estilos musicais!</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/albuns.jpg') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Álbuns</h5>
-    <p class="card-text">Melhores álbuns de seus artistas preferidos!</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/musica.avif') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Músicas</h5>
-    <p class="card-text">As melhores disponíveis!</p>
-  </div>
-</div>
-</div>
-</div>
+<script>
+  // Seleciona o botão e o menu dropdown
+  const dropdownButton = document.getElementById('dropdownNavbarLink');
+  const dropdownMenu = document.getElementById('dropdownNavbar');
 
-<div class="about">
-<div class="itens_about">
-  <h1>Sobre Nós</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe repudiandae voluptatem nisi repellat! Veritatis autem eligendi porro atque nulla, laboriosam eos ducimus facere magnam delectus qui repellat quasi nesciunt. Labore.</p>
-  </div>
+  // Função para alternar a visibilidade do dropdown
+  dropdownButton.addEventListener('click', function() {
+    dropdownMenu.classList.toggle('hidden');
+  });
 
-  <img src="{{ asset('assets/imagens/albuns.jpg') }}" alt="">
-</div>
+  // Fechar o dropdown se clicar fora dele
+  window.addEventListener('click', function(event) {
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
 
-<div class="populares">
-  <h1>Populares</h1>
-  <div class="table-wrapper">
-                <table class="table table-responsive table-striped table-hover">
-                  <thead class="">
-                    <tr>
-                      <th style="background-color:#6d7fcc; color:white;">Id</th>
-                      <th style="background-color:#6d7fcc; color:white;">Música</th>
-                      <th style="background-color:#6d7fcc; color:white;">Álbum</th>
-                      <th style="background-color:#6d7fcc; color:white;">Artista</th>
-                      <th style="background-color:#6d7fcc; color:white;">Gênero</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-    @foreach($populars as $popular)
-    <tr>
-        <td>{{$popular->id}}</td>
-        <td>{{$popular->musica->nome}}</td>
-        <td>{{$popular->album->nome}}</td>
-        <td>{{$popular->artista->nome}}</td>
-        <td>{{$popular->genero->nome}}</td>
-    </tr>
-    @endforeach
-</tbody>
-        </table>
-        </div>
-    </div>
-</div>
+  const dropdownButton = document.getElementById('dropdownNavbarLink');
+  const dropdownMenu = document.getElementById('dropdownNavbar');
 
-<div class="biografia">
-  <h1>Biografias</h1>
+  // Função para alternar a visibilidade do dropdown
+  dropdownButton.addEventListener('click', function(event) {
+    event.stopPropagation(); // Evita que o clique no botão feche o dropdown imediatamente
+    dropdownMenu.classList.toggle('hidden');
+  });
 
-  <div class="cartoes_bio">
-  <div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/theweekend.png') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Abel Makkonen Tesfaye, mais conhecido por seu nome artístico The Weeknd, é um cantor, compositor, ator e produtor musical canadense.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/arianna.jpeg') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Ariana Grande-Butera é uma cantora, compositora, produtora musical, atriz e empresária norte-americana.<p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="{{ asset('assets/imagens/djavan.jpg') }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Djavan Caetano Viana é um cantor, compositor, arranjador, produtor musical, empresário, violonista e ex-futebolista brasileiro. </p>
-  </div>
-</div>
-</div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  // Fechar o dropdown se clicar fora dele
+  window.addEventListener('click', function(event) {
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+</script>
 </body>
 </html>

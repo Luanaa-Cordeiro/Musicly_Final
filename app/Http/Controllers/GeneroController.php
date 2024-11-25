@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Genero; 
-use App\Http\Requests\StoreRequest;
+use App\Http\Requests\StoreGenero;
 
 class GeneroController extends Controller
 {
@@ -31,7 +31,7 @@ class GeneroController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRequest $request)
+    public function store(StoreGenero $request)
     {
         $created = $this->genero->create([
             'nome' => $request->input('nome'), 
@@ -63,7 +63,7 @@ class GeneroController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StoreGenero $request, string $id)
     {
         $updated = Genero::where('id', $id)->update($request->except(['_token','_method']));
 
@@ -73,6 +73,7 @@ class GeneroController extends Controller
 
         return redirect()->route('generos.index')->with('message','Erro ao atualizar');
     }
+    
 
     /**
      * Remove the specified resource from storage.
